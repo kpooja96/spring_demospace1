@@ -1,0 +1,48 @@
+package com.capgemini.service;
+
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.capgemini.dao.EmployeeDao;
+import com.capgemini.dao.ProjectDao;
+import com.capgemini.manytomany.Employee;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Autowired
+	private EmployeeDao dao;
+	@Autowired
+	private ProjectDao dao1;
+
+	@Override
+	public Employee findPersonById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addNewPerson(Set<Employee> person) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void addNewProject(Set<Project> project) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void save(Employee employee) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Employee findById(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

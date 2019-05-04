@@ -1,0 +1,18 @@
+package com.capgemini.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.capgemini.dao.EmployeeDao;
+import com.capgemini.dao.ProjectDao;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Autowired
+	private EmployeeDao dao;
+	
+	private ProjectDao dao1;
+	
+	public void addNewEmployee(Set<Employee> employee) {
+		//dao.save(person);
+		dao.saveAll(employee);
+}

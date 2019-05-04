@@ -1,0 +1,9 @@
+package com.capgemini.controller;
+
+public class Project {
+
+	public Project(int i, String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

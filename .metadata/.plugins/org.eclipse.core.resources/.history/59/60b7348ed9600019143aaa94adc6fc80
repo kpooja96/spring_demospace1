@@ -1,0 +1,12 @@
+package com.capgemini.controller;
+
+import com.capgemini.onetomany.Person;
+
+public class PersonService {
+
+	public void save(Person person) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

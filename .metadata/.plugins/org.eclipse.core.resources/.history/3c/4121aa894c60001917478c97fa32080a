@@ -1,0 +1,55 @@
+package com.capgemini.person.en;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import com.capgemini.model.Person;
+
+@Entity
+public class Profile {
+	
+	@Id
+	private int profId;
+	private String des;
+	@OneToOne(cascade = CascadeType.ALL)
+	
+	private Person person;
+	
+	public Profile() {
+		super();
+	}
+
+	public Profile(String des, Person person) {
+		super();
+		this.des = des;
+		this.person = person;
+	}
+
+	public String getDes() {
+		return des;
+	}
+
+	public void setDes(String des) {
+		this.des = des;
+	}
+
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+	@Override
+	public String toString() {
+		return "Profile [profId=" + profId + ", des=" + des + ", person=" + person + "]";
+	}
+
+	
+
+	
+}

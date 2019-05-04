@@ -1,0 +1,22 @@
+package com.capgemini.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Profile {
+	
+private int profId;
+private String des;
+
+public Profile() {
+	// TODO Auto-generated constructor stub
+}
+
+public Profile(int profId, String des) {
+	super();
+	this.profId = profId;
+	this.des = des;
+}
+
+
+}

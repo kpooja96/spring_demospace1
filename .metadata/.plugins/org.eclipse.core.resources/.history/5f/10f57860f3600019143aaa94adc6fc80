@@ -1,0 +1,11 @@
+package com.capgemini.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.capgemini.service.EmployeeService;
+
+public class EmployeeController {
+
+	@Autowired
+	EmployeeService service;
+}

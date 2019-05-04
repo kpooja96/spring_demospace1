@@ -1,0 +1,28 @@
+package com.capgemini.controller;
+
+import java.security.cert.Certificate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.capgemini.onetomany.Person;
+
+public class PersonController {
+
+	@Autowired
+	private PersonService service;
+
+	@RequestMapping("/")
+	public void setPerson() {
+		Person person = new Person(101, "Pooja", new Certificate(201, "java"));
+		service.save(person);
+
+	}
+
+	@RequestMapping("/new")
+	public Person getPerson() {
+		Person person = service.findById(101).get();
+		return person;
+	}
+
+}

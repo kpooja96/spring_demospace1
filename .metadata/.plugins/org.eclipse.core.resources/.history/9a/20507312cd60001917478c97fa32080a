@@ -1,0 +1,7 @@
+package com.capgemini.service;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PersonService extends JpaRepository<Person, Integer>{
+
+}

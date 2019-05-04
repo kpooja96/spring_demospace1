@@ -1,0 +1,63 @@
+package com.capgemini.manytomany;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+
+
+@Entity
+public class Employee {
+
+	@Id
+	private int empId;
+	private String empName;
+	
+	@ManyToMany(cascade = CascadeType.ALL)
+	private Set<Employee> employee;
+
+	public Employee() {
+	
+	}
+
+	public Employee(int empId, String empName,Set<Employee> employee) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.employee = employee;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public Set<Employee> getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Set<Employee> employee) {
+		this.employee = employee;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", empName=" + empName + ", employee=" + employee + "]";
+	}
+	
+	
+}

@@ -1,0 +1,6 @@
+package com.capgemini.demo1;
+
+public class HelloController {
+
+	public String Hello;
+}

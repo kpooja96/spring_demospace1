@@ -1,0 +1,36 @@
+package com.capgemini.controller;
+
+import java.security.cert.Certificate;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.capgemini.onetomany.Person;
+
+public class PersonController {
+
+	
+	@RequestMapping("/")
+	public void add()
+	{
+		Set<Certificate> certificate = new HashSet<>();
+		Certificate c1=new Certificate(101,"angular");
+		Certificate c1=new Certificate(102,"java");
+		Certificate c1=new Certificate(103,"C");
+	
+		c1.add();
+		c2.add();
+		c3.add();
+	
+	Person person = new Person(101,"Henry",certificate);
+	}
+	
+	@RequestMapping("/new")
+	public Person getPerson() {
+		Person person = service.findById();
+		return person;
+	}
+
+}

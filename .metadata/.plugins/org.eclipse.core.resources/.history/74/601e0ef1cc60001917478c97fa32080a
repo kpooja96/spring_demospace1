@@ -1,0 +1,20 @@
+package com.capgemini.service;
+
+
+import com.capgemini.model.Person;
+
+public class PersonService {
+
+	public Person findById(int i) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void addNew(com.capgemini.model.Person person) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+}

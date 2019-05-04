@@ -1,0 +1,50 @@
+package com.capgemini.model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+
+@Entity
+public class Profile {
+
+	@Id
+	private int profId;
+	private String des;
+	
+	 @OneToOne(cascade = CascadeType.ALL)
+	
+	public Profile() {
+		
+	}
+
+	public Profile(String des) {
+		super();
+		this.des = des;
+	}
+
+	public int getProfId() {
+		return profId;
+	}
+
+	public void setProfId(int profId) {
+		this.profId = profId;
+	}
+
+	public String getDes() {
+		return des;
+	}
+
+	public void setDes(String des) {
+		this.des = des;
+	}
+
+	@Override
+	public String toString() {
+		return "Profile [profId=" + profId + ", des=" + des + "]";
+	}
+
+	
+
+}

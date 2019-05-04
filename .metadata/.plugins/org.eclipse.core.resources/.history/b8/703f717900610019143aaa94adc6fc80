@@ -1,0 +1,19 @@
+package com.capgemini.service;
+
+import java.util.Set;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.controller.Project;
+import com.capgemini.manytomany.Employee;
+
+
+public interface EmployeeService {
+	public Employee findPersonById(int id);
+	void addNewPerson(Set<Employee> person);
+	void addNewProject(Set<Project> project);
+}
+
+	
+

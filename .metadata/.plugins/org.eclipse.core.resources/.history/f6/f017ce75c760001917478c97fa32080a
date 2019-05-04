@@ -1,0 +1,10 @@
+package com.capgemini.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Profile {
+	
+private int profId;
+private String des;
+}

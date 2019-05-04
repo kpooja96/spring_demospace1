@@ -1,0 +1,68 @@
+package com.capgemini.onetomany;
+
+import javax.persistence.Entity;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Person {
+
+	@Id
+	private int pid;
+	private String pname;
+
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(unique = true)
+
+	private Set<Certificate> certificate;
+
+	public Person() {
+
+	}
+
+	public Person(String pname, Cerificate certificate) {
+		super();
+		this.pname = pname;
+		this.certificate = certificate;
+	}
+
+	public int getPid() {
+		return pid;
+	}
+
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+
+	public String getPname() {
+		return pname;
+	}
+
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+
+	public Set<Certificate> getCertificate() {
+		return certificate;
+	}
+
+	public void setCertificate(Set<Certificate> certificate) {
+		this.certificate = certificate;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [pid=" + pid + ", pname=" + pname + ", getPid()=" + getPid() + ", getPname()=" + getPname()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+
+	
+
+	
+}

@@ -1,0 +1,24 @@
+package com.capgemini.controller;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import com.capgemini.service.EmployeeService;
+import com.capgemini.manytomany.project;
+
+public class EmployeeController {
+
+	@Autowired
+	EmployeeService service;
+	
+	@RequestMapping
+	public void add() {
+		Set<Project> set = new HashSet<Project>();
+		Project p1 = new Project();
+		Project p2 = new Project();
+		Project p3 = new Project();
+		
+	}
+}

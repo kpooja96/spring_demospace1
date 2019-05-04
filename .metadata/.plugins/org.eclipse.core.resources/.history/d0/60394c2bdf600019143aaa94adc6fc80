@@ -1,0 +1,58 @@
+package com.capgemini.onetomany;
+
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+public class Cerificate {
+
+	private int certificateId;
+	private String certificateName;
+	
+	@ManyToOne
+	@JoinColumn(unique = true)
+	
+	private Person person;
+	
+	public Cerificate() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Cerificate(String certificateName, Person person) {
+		super();
+		this.certificateName = certificateName;
+		this.person = person;
+	}
+
+	public int getCertificateId() {
+		return certificateId;
+	}
+
+	public void setCertificateId(int certificateId) {
+		this.certificateId = certificateId;
+	}
+
+	public String getCertificateName() {
+		return certificateName;
+	}
+
+	public void setCertificateName(String certificateName) {
+		this.certificateName = certificateName;
+	}
+
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+	@Override
+	public String toString() {
+		return "Cerificate [certificateId=" + certificateId + ", certificateName=" + certificateName + ", person="
+				+ person + "]";
+	}
+	
+	
+}

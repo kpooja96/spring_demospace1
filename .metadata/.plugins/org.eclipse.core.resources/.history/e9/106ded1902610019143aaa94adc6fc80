@@ -1,0 +1,18 @@
+package com.capgemini.service;
+
+import java.util.Set;
+
+import com.capgemini.controller.Project;
+import com.capgemini.manytomany.Employee;
+
+
+public interface EmployeeService {
+	public Employee findPersonById(int id);
+	void addNewPerson(Set<Employee> person);
+	void addNewProject(Set<Project> project);
+	
+	
+}
+
+	
+

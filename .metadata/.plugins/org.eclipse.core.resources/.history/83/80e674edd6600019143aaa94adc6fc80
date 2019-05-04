@@ -1,0 +1,15 @@
+package com.capgemini.onetomany;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Person {
+	
+	@Id
+	private int pid;
+	private String pname;
+
+	@OneToMany(mappedBy=person)
+}

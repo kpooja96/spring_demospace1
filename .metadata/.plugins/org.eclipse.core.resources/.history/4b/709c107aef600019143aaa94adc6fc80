@@ -1,0 +1,20 @@
+package com.capgemini.manytomany;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Employee {
+
+	@Id
+	private int empId;
+	private String empName;
+	
+	@OneToMany(cascade = CascadeType.ALL,orphanRemoval=true)
+	private Set<Employee> employee;
+
+}

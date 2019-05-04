@@ -1,0 +1,66 @@
+package com.capgemini.manytomany;
+
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+import com.capgemini.controller.Project;
+
+
+
+@Entity
+public class Employee {
+
+	@Id
+	private int employeeId;
+	private String employeeName;
+	
+	@ManyToMany
+	@JoinTable(name="employee_project",joinColumns=@JoinColumn(name = "employeeId"),inverseJoinColumns=@JoinColumn(name = "projectId"))
+
+	private Set<Project> project;
+
+	public Employee() {
+	
+	}
+
+	public Employee(int empId, String empName) {
+		super();
+		this.employeeId = empId;
+		this.employeeName = empName;
+	
+	}
+
+	public int getEmpId() {
+		return employeeId;
+	}
+
+	public void setEmpId(int empId) {
+		this.employeeId = empId;
+	}
+
+	public String getEmpName() {
+		return employeeName;
+	}
+
+	public void setEmpName(String empName) {
+		this.employeeName = empName;
+	}
+
+	public Set<Employee> getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Set<Employee> employee) {
+		this.employee = employee;
+	}
+
+
+
+	
+	
+}

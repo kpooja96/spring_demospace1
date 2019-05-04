@@ -1,0 +1,8 @@
+package com.capgemini.onetomany;
+
+public class Certificate {
+	
+	private int certificateId;
+	private String certiName;
+
+}

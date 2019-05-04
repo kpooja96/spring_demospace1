@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="onetomany"/>
+<aop-project name="onetoone_work"/>
+<aop-project name="demo1"/>
+<aop-project name="manytomany"/>
+</aop-reference-model>
